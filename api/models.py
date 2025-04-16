@@ -102,7 +102,7 @@ class Video(models.Model):
 
     version = models.CharField(default='1', max_length=2, help_text="Version Number: If the video has been edited or updated, store version details")
 
-    keyword = models.TextField(blank=True, help_text="Relevant tags or keywords that help in searching or categorizing the video")
+    keyword = models.JSONField(blank=True, help_text="Relevant tags or keywords that help in searching or categorizing the video")
     description = models.TextField(blank=True, help_text="A brief description of the video’s content or storyline")
 
     isMonetized = models.BooleanField(default=False, help_text="Whether the video is monetized (e.g., ads enabled, subscription content)")
